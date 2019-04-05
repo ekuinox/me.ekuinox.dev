@@ -13,7 +13,6 @@ export default class App extends React.Component {
 				<ul>
 					<li><a href="https://twitter.com/ekuinox" target="_new">Twitter</a></li>
 					<li><a href="https://github.com/ekuinox" target="_new">GitHub</a></li>
-					<li><a href="https://plus.google.com/+Lemonlm0X" target="_new"><s>Google+</s></a></li>
 					<li><a href="https://mstdn.club/@lm0x" target="_new">Mastodon(mstdn.club)</a></li>
 					<li><a href="https://keybase.io/lm0x" target="_new">Keybase</a></li>
 					<li>Discord: ekuinox#1378</li>
