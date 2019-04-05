@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const env = process.env.WEBPACK_ENV == undefined ? 'development' : process.env.WEBPACK_ENV
 
@@ -28,6 +29,9 @@ module.exports = {
 			title: "ekuinox's home page",
 			inject: false,
 			template: "./src/index.html"
-		})
+		}),
+		new CopyWebpackPlugin([
+			{from: './src/.well-known', to: './dist/.well-known'}
+		])
 	]
 }
