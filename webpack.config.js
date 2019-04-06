@@ -33,5 +33,8 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{from: './src/.well-known', to: '.well-known'}
 		])
-	]
+	],
+	devServer: {
+		host: '0.0.0.0'
+	}
 }
