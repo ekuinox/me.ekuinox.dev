@@ -31,7 +31,7 @@ module.exports = {
 			template: "./src/index.html"
 		}),
 		new CopyWebpackPlugin([
-			{from: './src/.well-known', to: './dist/.well-known'}
+			{from: './src/.well-known', to: '.well-known'}
 		])
 	]
 }
