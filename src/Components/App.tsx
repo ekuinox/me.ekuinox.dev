@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 
 class App extends React.Component {
 	render() {
@@ -15,14 +15,17 @@ class App extends React.Component {
 						<li><Link to="/works">Works</Link></li>
 						<li><Link to="/likes">Likes</Link></li>
 					</ul>
-
-      				<Route exact path='/' component={About} />
-      				<Route path='/contacts' component={Contacts} />
-      				<Route path='/links' component={Links} />
-      				<Route path='/products' component={Products} />
-      				<Route path='/works' component={Works} />
-      				<Route path='/likes' component={Likes} />
-    				</div>
+					
+					<Switch>
+						<Route exact path='/' component={About} />
+							<Route path='/contacts' component={Contacts} />
+							<Route path='/links' component={Links} />
+							<Route path='/products' component={Products} />
+							<Route path='/works' component={Works} />
+							<Route path='/likes' component={Likes} />
+						<Route component={() => (<div>プキ！</div>)} />
+					</Switch>
+    			</div>
  			</BrowserRouter>
 		)
 	}
