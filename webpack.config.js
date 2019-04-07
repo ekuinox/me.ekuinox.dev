@@ -32,7 +32,7 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{from: './src/.well-known', to: '.well-known'},
-			{fromZ: './static/_redirects', to: './'}
+			{from: './static/_redirects', to: './'}
 		])
 	],
 	devServer: {
