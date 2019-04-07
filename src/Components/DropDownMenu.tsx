@@ -4,6 +4,12 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link, LinkProps } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
+import {path as AboutPath} from './Routes/About'
+import {path as ContactsPath} from './Routes/Contacts'
+import {path as LinksPath} from './Routes/Links'
+import {path as ProductsPath} from './Routes/Products'
+import {path as WorksPath} from './Routes/Works'
+import {path as LikesPath} from './Routes/Likes'
 
 const NoneTextDecorationLink: React.StatelessComponent<LinkProps> = (props) => {
     return <Link to={props.to} style={{textDecoration: 'none'}}>{ props.children }</Link>
@@ -48,22 +54,22 @@ export default class DropDownMenu extends React.Component<{}, State> {
                     open={Boolean(anchorEl)}
                     onClose={this.onClose}
                 >
-                    <NoneTextDecorationLink to="/">
+                    <NoneTextDecorationLink to={AboutPath}>
                         <MenuItem onClick={this.onClose}>Home</MenuItem>
                     </NoneTextDecorationLink>
-                    <NoneTextDecorationLink to="/contacts">
+                    <NoneTextDecorationLink to={ContactsPath}>
                         <MenuItem onClick={this.onClose}>Contacts</MenuItem>
                     </NoneTextDecorationLink>
-                    <NoneTextDecorationLink to="/links">
+                    <NoneTextDecorationLink to={LinksPath}>
                         <MenuItem onClick={this.onClose}>Links</MenuItem>
                     </NoneTextDecorationLink>
-                    <NoneTextDecorationLink to="/products">
+                    <NoneTextDecorationLink to={ProductsPath}>
                         <MenuItem onClick={this.onClose}>Products</MenuItem>
                     </NoneTextDecorationLink>
-                    <NoneTextDecorationLink to="/works">
+                    <NoneTextDecorationLink to={WorksPath}>
                         <MenuItem onClick={this.onClose}>Works</MenuItem>
                     </NoneTextDecorationLink>
-                    <NoneTextDecorationLink to="/likes">
+                    <NoneTextDecorationLink to={LikesPath}>
                         <MenuItem onClick={this.onClose}>Likes</MenuItem>
                     </NoneTextDecorationLink>
                 </Menu>
