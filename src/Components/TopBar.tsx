@@ -25,9 +25,9 @@ const styles = createStyles({
 
 export interface Props extends WithStyles<typeof styles> {}
 
-const MenuIcon: React.StatelessComponent<{to: string, src: string}> = (props) => (
+const MenuIcon: React.StatelessComponent<{to: string, src: string, style?: React.CSSProperties}> = (props) => (
     <a href={props.to} target="_new">
-        <Button color="inherit"><img src={props.src} /></Button>
+        <Button color="inherit"><img src={props.src} style={props.style}/></Button>
     </a>
 )
 
@@ -39,14 +39,14 @@ function ButtonAppBar(props: Props) {
             backgroundColor: "#f06292",
 
         }}>
-            <Toolbar>
+            <Toolbar style={{height: '10vh'}}>
                 <DropDownMenu />
-                <Typography variant="h6" color="inherit" className={classes.grow}>
+                <Typography variant="h6" color="inherit" className={classes.grow} style={{marginLeft: '2vw', fontSize: '5vh'}} >
                     ekuinox.dev
                 </Typography>
-                <MenuIcon to="https://github.com/ekuinox" src={GitHubIcon}/>
-                <MenuIcon to="https://twitter.com/ekuinox" src={TwitterIcon}/>
-                <MenuIcon to="mailto:eku@lmx.pw" src={EmailIcon}/>
+                <MenuIcon to="https://github.com/ekuinox" src={GitHubIcon} style={{height: '5vh'}} />
+                <MenuIcon to="https://twitter.com/ekuinox" src={TwitterIcon} style={{height: '5vh'}} />
+                <MenuIcon to="mailto:eku@lmx.pw" src={EmailIcon} style={{height: '5vh'}} />
             </Toolbar>
         </AppBar>
     </div>
