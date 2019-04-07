@@ -31,7 +31,7 @@ module.exports = {
 			template: "./src/index.html"
 		}),
 		new CopyWebpackPlugin([
-			{from: './src/.well-known', to: '.well-known'},
+			{from: './static/.well-known', to: '.well-known'},
 			{from: './static/_redirects', to: './'}
 		])
 	],
