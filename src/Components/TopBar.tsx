@@ -25,6 +25,12 @@ const styles = createStyles({
 
 export interface Props extends WithStyles<typeof styles> {}
 
+const MenuIcon: React.StatelessComponent<{to: string, src: string}> = (props) => (
+    <a href={props.to} target="_new">
+        <Button color="inherit"><img src={props.src} /></Button>
+    </a>
+)
+
 function ButtonAppBar(props: Props) {
     const { classes } = props;
     return (
@@ -35,21 +41,9 @@ function ButtonAppBar(props: Props) {
                 <Typography variant="h6" color="inherit" className={classes.grow}>
                     ekuinox.dev
                 </Typography>
-                <a href="https://github.com/ekuinox" target="_new">
-                    <Button color="inherit">
-                        <img src={GitHubIcon} />
-                    </Button>
-                </a>
-                <a href="https://twitter.com/ekuinox" target="_new">
-                    <Button color="inherit">
-                        <img src={TwitterIcon} />
-                    </Button>
-                </a>
-                <a href="mailto:eku@lmx.pw" target="_new">
-                    <Button color="inherit">
-                        <img src={EmailIcon} />
-                    </Button>
-                </a>
+                <MenuIcon to="https://github.com/ekuinox" src={GitHubIcon}/>
+                <MenuIcon to="https://twitter.com/ekuinox" src={TwitterIcon}/>
+                <MenuIcon to="mailto:eku@lmx.pw" src={EmailIcon}/>
             </Toolbar>
         </AppBar>
     </div>
