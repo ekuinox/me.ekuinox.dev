@@ -18,8 +18,8 @@ const styles = createStyles({
         flexGrow: 1,
     },
     menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
+        marginLeft: 0,
+        marginRight: 0,
     },
 })
 
@@ -35,7 +35,10 @@ function ButtonAppBar(props: Props) {
     const { classes } = props;
     return (
     <div className={classes.root}>
-        <AppBar position="static" style={{backgroundColor: "#f06292"}}>
+        <AppBar position="static" style={{
+            backgroundColor: "#f06292",
+
+        }}>
             <Toolbar>
                 <DropDownMenu />
                 <Typography variant="h6" color="inherit" className={classes.grow}>
