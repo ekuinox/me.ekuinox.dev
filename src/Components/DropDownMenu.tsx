@@ -40,7 +40,7 @@ export default class DropDownMenu extends React.Component<{}, State> {
                     aria-haspopup="true"
                     onClick={this.onClick}
                 >
-                    <MenuIcon />
+                    <MenuIcon style={{color: 'white'}} />
                 </Button>
                 <Menu
                     id="drop-down-menu"
