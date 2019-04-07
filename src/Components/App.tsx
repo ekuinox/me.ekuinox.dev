@@ -9,11 +9,11 @@ class App extends React.Component {
 				<TopBar />
 				<Switch>
 					<Route exact path='/' component={About} />
-						<Route path='/contacts' component={Contacts} />
-						<Route path='/links' component={Links} />
-						<Route path='/products' component={Products} />
-						<Route path='/works' component={Works} />
-						<Route path='/likes' component={Likes} />
+					<Route path='/contacts' component={Contacts} />
+					<Route path='/links' component={Links} />
+					<Route path='/products' component={Products} />
+					<Route path='/works' component={Works} />
+					<Route path='/likes' component={Likes} />
 					<Route component={() => (<div>プキ！</div>)} />
 				</Switch>
  			</BrowserRouter>
