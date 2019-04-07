@@ -1,31 +1,21 @@
 import * as React from 'react'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import TopBar from './TopBar'
 
 class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-    			<div>
-					<h1>ハロー</h1>
-					<ul>
-						<li><Link to="/">Home</Link></li>
-						<li><Link to="/contacts">Contacts</Link></li>
-						<li><Link to="/links">Links</Link></li>
-						<li><Link to="/products">Products</Link></li>
-						<li><Link to="/works">Works</Link></li>
-						<li><Link to="/likes">Likes</Link></li>
-					</ul>
-					
-					<Switch>
-						<Route exact path='/' component={About} />
-							<Route path='/contacts' component={Contacts} />
-							<Route path='/links' component={Links} />
-							<Route path='/products' component={Products} />
-							<Route path='/works' component={Works} />
-							<Route path='/likes' component={Likes} />
-						<Route component={() => (<div>プキ！</div>)} />
-					</Switch>
-    			</div>
+				<TopBar />
+				<Switch>
+					<Route exact path='/' component={About} />
+						<Route path='/contacts' component={Contacts} />
+						<Route path='/links' component={Links} />
+						<Route path='/products' component={Products} />
+						<Route path='/works' component={Works} />
+						<Route path='/likes' component={Likes} />
+					<Route component={() => (<div>プキ！</div>)} />
+				</Switch>
  			</BrowserRouter>
 		)
 	}
