@@ -1,8 +1,9 @@
 import * as React from 'react'
+import PageTitle from '../PageTitle'
 
 export default () => (
 	<div>
-		<h2>Links</h2>
+		<PageTitle title="Links" />
 		<ul>
 			<li><a href="https://blog.feelingso.blue" target="_new">れもくすブログ（ｎ代目）</a></li>
 			<li><a href="https://bookmeter.com/users/778480" target="_new">読書メーター</a></li>

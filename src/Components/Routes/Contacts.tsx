@@ -1,8 +1,9 @@
 import * as React from 'react'
+import PageTitle from '../PageTitle'
 
 export default () => (
 	<div>
-		<h2>Contacts</h2>
+		<PageTitle title="Contacts" />
 		<ul>
 			<li><a href="https://twitter.com/ekuinox" target="_new">Twitter</a></li>
 			<li><a href="https://github.com/ekuinox" target="_new">GitHub</a></li>

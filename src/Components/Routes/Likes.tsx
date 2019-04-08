@@ -1,8 +1,9 @@
 import * as React from 'react'
+import PageTitle from '../PageTitle'
 
 export default () => (
 	<div>
-		<h2>Likes</h2>
+		<PageTitle title="Likes" />
 		<ul>
 			<li>
 				<a href="http://www.dokidokivisual.com/comics/book/past.php?cid=1290" target="_new">どうして私が美術科に!?</a>
