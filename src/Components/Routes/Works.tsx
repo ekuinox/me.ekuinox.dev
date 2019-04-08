@@ -5,7 +5,7 @@ import { Typography } from '@material-ui/core'
 export default () => (
 	<div>
 		<PageTitle title="Works" />
-		<Typography style={{fontSize: '3vh'}}>職を探しております。ご連絡お待ちしております。</Typography>
+		<Typography style={{fontSize: '3vh', marginLeft: '3vh'}}>職を探しております。ご連絡お待ちしております。</Typography>
 	</div>
 )
 
