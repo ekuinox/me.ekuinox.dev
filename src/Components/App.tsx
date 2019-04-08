@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Routing from './Routing'
-import TopBar from './TopBar'
+import TopBar from './Header'
 import Footer from './Footer'
 import '../assets/stylesheets/main.css'
 
