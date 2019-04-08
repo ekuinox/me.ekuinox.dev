@@ -52,7 +52,7 @@ export default class DropDownMenu extends React.Component<{}, State> {
                             fontSize:'4vh',
                         }}>
                         <p style={{
-                            width: '80%',
+                            fontSize: '80%',
                             height: '100%',
                             color: props.color,
                             }}>
