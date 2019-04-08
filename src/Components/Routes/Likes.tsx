@@ -1,11 +1,9 @@
 import * as React from 'react'
-import PageTitle from '../PageTitle'
 import { UL, LI } from '../PageList'
-import PageBody from '../PageBody'
+import Page from '../Page'
 
 export default () => (
-	<PageBody>
-		<PageTitle title="Likes" />
+	<Page title="Likes">
 		<UL>
 			<LI>
 				<a href="http://www.dokidokivisual.com/comics/book/past.php?cid=1290" target="_new">どうして私が美術科に!?</a>
@@ -20,7 +18,7 @@ export default () => (
 				<a href="https://iamyunomi.bandcamp.com/" target="_new">Yunomi</a>
 			</LI>
 		</UL>
-	</PageBody>
+	</Page>
 )
 
 export const path = '/likes'

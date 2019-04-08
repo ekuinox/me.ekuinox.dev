@@ -1,9 +1,7 @@
 import * as React from 'react'
-import PageTitle from '../PageTitle'
-import PageBody from '../PageBody'
+import Page from '../Page'
 
 export default  () => (
-    <PageBody>
-        <PageTitle title="Not Found" />
-    </PageBody>
+    <Page title="Not Found">
+    </Page>
 )
