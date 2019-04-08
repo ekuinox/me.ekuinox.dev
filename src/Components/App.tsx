@@ -2,6 +2,7 @@ import * as React from 'react'
 import Routing from './Routing'
 import TopBar from './TopBar'
 import Footer from './Footer'
+import '../assets/stylesheets/main.css'
 
 class App extends React.Component {
 	render() {
