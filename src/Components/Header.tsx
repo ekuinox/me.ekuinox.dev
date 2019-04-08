@@ -36,7 +36,8 @@ function ButtonAppBar(props: Props) {
     return (
     <div className={classes.root}>
         <AppBar position="static" style={{
-            backgroundColor: "#f06292"
+            backgroundColor: "#f06292",
+            marginBottom: '2vh'
         }}>
             <Toolbar style={{height: '10vh'}}>
                 <DropDownMenu />
