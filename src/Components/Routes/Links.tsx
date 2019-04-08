@@ -1,9 +1,10 @@
 import * as React from 'react'
 import PageTitle from '../PageTitle'
 import { UL, LI } from '../PageList'
+import PageBody from '../PageBody'
 
 export default () => (
-	<div>
+	<PageBody>
 		<PageTitle title="Links" />
 		<UL>
 			<LI><a href="https://blog.feelingso.blue" target="_new">れもくすブログ（ｎ代目）</a></LI>
@@ -14,7 +15,7 @@ export default () => (
 			<LI><a href="http://amzn.asia/0KSla0Y" target="_new">Amazon Wishlist</a></LI>
 			<LI><a href="https://soundcloud.com/lm0x/likes" target="_new">SoundCloud likes</a></LI>
 		</UL>
-	</div>
+	</PageBody>
 )
 
 export const path = '/links'

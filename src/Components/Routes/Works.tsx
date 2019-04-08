@@ -1,12 +1,13 @@
 import * as React from 'react'
 import PageTitle from '../PageTitle'
 import { Typography } from '@material-ui/core'
+import PageBody from '../PageBody'
 
 export default () => (
-	<div>
+	<PageBody>
 		<PageTitle title="Works" />
 		<Typography style={{fontSize: '3vh', marginLeft: '3vh'}}>職を探しております。ご連絡お待ちしております。</Typography>
-	</div>
+	</PageBody>
 )
 
 export const path = '/works'

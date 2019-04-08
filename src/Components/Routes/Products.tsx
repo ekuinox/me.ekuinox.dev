@@ -1,9 +1,10 @@
 import * as React from 'react'
 import PageTitle from '../PageTitle'
 import { UL, LI } from '../PageList'
+import PageBody from '../PageBody'
 
 export default () => (
-	<div>
+	<PageBody>
 		<PageTitle title="Products" />
 		<UL>
 			<LI>
@@ -15,7 +16,7 @@ export default () => (
 				<br/>SpigotでDigAllをやるプラグインをKotlinで書いています。
 			</LI>
 		</UL>
-	</div>
+	</PageBody>
 )
 
 export const path = '/products'

@@ -1,9 +1,10 @@
 import * as React from 'react'
 import PageTitle from '../PageTitle'
 import { UL, LI } from '../PageList'
+import PageBody from '../PageBody'
 
 export default () => (
-	<div>
+	<PageBody>
 		<PageTitle title="Contacts" />
 		<UL>
 			<LI><a href="https://twitter.com/ekuinox" target="_new">Twitter</a></LI>
@@ -13,7 +14,7 @@ export default () => (
 			<LI>Discord: ekuinox#1378</LI>
 			<LI><a href="mailto:eku@lmx.pw">eku@lmx.pw</a></LI>
 		</UL>
-	</div>
+	</PageBody>
 )
 
 export const path = '/contacts'
