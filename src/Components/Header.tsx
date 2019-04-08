@@ -40,13 +40,13 @@ function ButtonAppBar(props: Props) {
             marginBottom: '2vh'
         }}>
             <Toolbar style={{height: '10vh'}}>
-                <DropDownMenu />
                 <Typography variant="h6" color="inherit" className={classes.grow} style={{marginLeft: '2vw', fontSize: '5vh'}} >
                     ekuinox.dev
                 </Typography>
                 <MenuIcon to="https://github.com/ekuinox" src={GitHubIcon} style={{height: '5vh'}} />
                 <MenuIcon to="https://twitter.com/ekuinox" src={TwitterIcon} style={{height: '5vh'}} />
                 <MenuIcon to="mailto:eku@lmx.pw" src={EmailIcon} style={{height: '5vh'}} />
+                <DropDownMenu />
             </Toolbar>
         </AppBar>
     </div>
