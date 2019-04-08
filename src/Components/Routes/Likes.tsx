@@ -4,7 +4,7 @@ import PageTitle from '../PageTitle'
 export default () => (
 	<div>
 		<PageTitle title="Likes" />
-		<ul>
+		<ul  style={{fontSize: '2vh'}}>
 			<li>
 				<a href="http://www.dokidokivisual.com/comics/book/past.php?cid=1290" target="_new">どうして私が美術科に!?</a>
 			</li>

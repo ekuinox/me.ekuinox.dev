@@ -4,7 +4,7 @@ import PageTitle from '../PageTitle'
 export default () => (
 	<div>
 		<PageTitle title="Links" />
-		<ul>
+		<ul style={{fontSize: '2vh'}}>
 			<li><a href="https://blog.feelingso.blue" target="_new">れもくすブログ（ｎ代目）</a></li>
 			<li><a href="https://bookmeter.com/users/778480" target="_new">読書メーター</a></li>
 			<li><a href="https://itunes.apple.com/profile/lm0x" target="_new">AppleMusic</a></li>

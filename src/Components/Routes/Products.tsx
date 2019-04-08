@@ -4,7 +4,7 @@ import PageTitle from '../PageTitle'
 export default () => (
 	<div>
 		<PageTitle title="Products" />
-		<ul>
+		<ul style={{fontSize: '2vh'}}>
 			<li>
 				<a href="https://github.com/ekuinox/Fogo" target="_new">ekuinox/Fogo</a>
 				<br/>C++でゲームプログラム用にライブラリを自作しておるが、稚拙極まりないので良かったら優しく批評していただきたい。

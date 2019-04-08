@@ -1,10 +1,11 @@
 import * as React from 'react'
 import PageTitle from '../PageTitle'
+import { Typography } from '@material-ui/core'
 
 export default () => (
 	<div>
 		<PageTitle title="Works" />
-		<p>職を探しております。ご連絡お待ちしております。</p>
+		<Typography style={{fontSize: '3vh'}}>職を探しております。ご連絡お待ちしております。</Typography>
 	</div>
 )
 
