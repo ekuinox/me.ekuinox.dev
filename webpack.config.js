@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = process.env.WEBPACK_ENV == undefined ? 'development' : process.env.WEBPACK_ENV
 
@@ -48,5 +49,8 @@ module.exports = {
 	devServer: {
 		historyApiFallback: true,
 		host: '0.0.0.0'
+	},
+	optimization: {
+		minimizer: [new UglifyJsPlugin()],
 	}
 }

@@ -44,5 +44,8 @@
     "webpack-cli": "^3.3.0",
     "webpack-command": "^0.4.2",
     "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.3"
   }
 }
