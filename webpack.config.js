@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-const env = process.env.WEBPACK_ENV == undefined ? 'development' : process.env.WEBPACK_ENV
+const env = process.env.WEBPACK_ENV || 'production'
 
 module.exports = {
 	mode: env,
