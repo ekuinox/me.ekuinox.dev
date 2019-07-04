@@ -5,7 +5,7 @@ import PageBody from '../Page'
 
 export default () => (
 	<PageBody title="Works">
-		<Typography style={{fontSize: '3vh', marginLeft: '3vh'}}>職を探しております。ご連絡お待ちしております。</Typography>
+		<Typography style={{fontSize: '3vh', marginLeft: '3vh'}}>私ekuinoxは内定を頂きました。誠にありがとうございました。</Typography>
 	</PageBody>
 )
 
