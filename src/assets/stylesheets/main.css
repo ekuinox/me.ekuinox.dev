@@ -1,3 +1,8 @@
+body {
+    /* とりあえずの対処 */
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
