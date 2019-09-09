@@ -6,6 +6,8 @@ export default () => (
 	<Page title="Links">
 		<UL>
 			<LI><a href="https://blog.feelingso.blue" target="_new">れもくすブログ（ｎ代目）</a></LI>
+			<LI><a href="https://qiita.com/ekuinox">Qiita</a></LI>
+			<LI><a href="https://ekuinox.qrunch.io">Qrunch</a></LI>
 			<LI><a href="https://bookmeter.com/users/778480" target="_new">読書メーター</a></LI>
 			<LI><a href="https://itunes.apple.com/profile/lm0x" target="_new">AppleMusic</a></LI>
 			<LI><a href="http://animetick.net/users/6lmx" target="_new">Animetick</a></LI>
