@@ -20,9 +20,6 @@ const Page: React.StatelessComponent<{title: string, color?: string}> = (props) 
 	}}>
 		<PageTitle title={props.title} color={props.color} />
 		{props.children}
-		<a href='https://gist.github.com/ekuinox/4cda6cee3325412bcb18e9e53bdb5ce7' style={{textAlign: 'center', position: 'absolute', left: 0, right: 0, bottom: 0}}>
-			<Typography style={{fontSize: '5vh', marginLeft: '5vh', color: 'orange', fontStyle: 'oblique', fontFamily: 'ＭＳ Ｐゴシック', textDecorationLine: 'underline'}}>ekuinoxをアルバイトで雇って欲しい!!!!（詳細はここ）</Typography>
-		</a>
 	</div>
 )
 
