@@ -40,7 +40,7 @@ function ButtonAppBar(props: Props) {
             marginBottom: '2vh'
         }}>
             <Toolbar style={{height: '10vh'}}>
-                <Typography variant="h6" color="inherit" className={classes.grow} style={{marginLeft: '2vw', fontSize: '5vh'}} >
+                <Typography variant="h1" color="inherit" className={classes.grow} style={{marginLeft: '2vw', fontSize: '5vh'}} >
                     ekuinox.dev
                 </Typography>
                 <MenuIcon to="https://github.com/ekuinox" src={GitHubIcon} style={{height: '5vh'}} />
