@@ -4,13 +4,11 @@ import { Typography } from '@material-ui/core'
 import PageTitle from './PageTitle'
 
 const Page: React.StatelessComponent<{title: string, color?: string}> = (props) => (
-	<div style={{
-		marginLeft: '5px',
-		marginRight: '5px',
-		paddingTop: '5px',
-		paddingLeft: '10px',
-		paddingRight: '10px',
-		height: '70vh',
+	<article style={{
+		margin: '1em .5em',
+		padding: '1em 1.2em',
+		height: 'auto',
+		minHeight: '70vh',
 		borderRadius: '20px',
 		borderStyle: 'solid',
 		borderWidth: '2px',
@@ -20,7 +18,7 @@ const Page: React.StatelessComponent<{title: string, color?: string}> = (props) 
 	}}>
 		<PageTitle title={props.title} color={props.color} />
 		{props.children}
-	</div>
+	</article>
 )
 
 export default Page
