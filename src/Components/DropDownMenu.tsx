@@ -7,7 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu'
 import {path as AboutPath} from './Routes/About'
 import {path as ContactsPath} from './Routes/Contacts'
 import {path as LinksPath} from './Routes/Links'
-import {path as ProductsPath} from './Routes/Products'
 import {path as WorksPath} from './Routes/Works'
 import {path as LikesPath} from './Routes/Likes'
 import { ColorProperty } from 'csstype'
@@ -81,7 +80,6 @@ export default class DropDownMenu extends React.Component<{}, State> {
                     <MenuItemButton to={AboutPath} title="Home" color={red[300]} />
                     <MenuItemButton to={ContactsPath} title="Contacts" color={red[300]} />
                     <MenuItemButton to={LinksPath} title="Links" color={red[300]} />
-                    <MenuItemButton to={ProductsPath} title="Products" color={red[300]} />
                     <MenuItemButton to={LikesPath} title="Likes" color={red[300]} />
                     <MenuItemButton to={WorksPath} title="Works" color={red[300]} />
                 </Menu>
