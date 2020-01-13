@@ -14,6 +14,7 @@ export default () => (
 			<p>C++でDirect3DとかUE4とかをやってました。今はRustとかScalaに興味があります。</p>
 			<p>Future Houseが好きです。アーティストで言えばAiobahnが好き。</p>
 			<p>まんがタイムきらら4誌を追っています。最近は追いつけていませんが...。</p>
+			<p>気軽に絡んで欲しい、おれは受け身の人間なので...。</p>
 		</Typography>
 	</Page>
 )
