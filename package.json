@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "export",
     "start": "next start"
   },
   "dependencies": {
