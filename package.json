@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rm -rf ./dist && webpack",
     "export": "yarn build && mv dist out",
+    "deploy": "yarn export",
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
