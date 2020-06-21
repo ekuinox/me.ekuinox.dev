@@ -4,10 +4,15 @@ import styled from 'styled-components';
 import media from "styled-media-query";
 
 const Main = styled.main`
-	${ media.lessThan('medium')`width: 100%;`}
-	${ media.greaterThan('medium')`width: 50%;`}
+	${ media.lessThan('medium')`
+		width: 100%;
+		padding: 0;
+	` }
+	${ media.greaterThan('medium')`
+		width: 50%;
+		padding: 5%;
+		` }
 	margin: auto;
-	padding: 5%;
 	text-align: center;
 `;
 
@@ -21,7 +26,6 @@ const H1 = styled.h1`
 
 const Paragraph = styled.p`
 	margin: auto;
-	padding: 1%;
 	word-wrap: break-word;
 `;
 
