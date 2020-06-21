@@ -20,5 +20,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.10.2"
   }
 }
