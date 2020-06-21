@@ -20,5 +20,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.0",
+    "styled-components": "^5.1.1",
+    "styled-media-query": "^2.1.2"
   }
 }
