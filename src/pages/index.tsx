@@ -6,7 +6,7 @@ import media from "styled-media-query";
 const Main = styled.main`
 	${ media.lessThan('medium')`
 		width: 100%;
-		padding: 0;
+		padding: 5vh;
 	` }
 	${ media.greaterThan('medium')`
 		width: 50%;
@@ -22,11 +22,34 @@ const Avatar = styled.img`
 `
 
 const H1 = styled.h1`
+	font-size: 30px;
+	padding: 1vh 0;
 `
 
 const Paragraph = styled.p`
 	margin: auto;
 	word-wrap: break-word;
+	padding: 1vh 0;
+`;
+
+const Ul = styled.ul`
+	display: table;
+	border-collapse: separate;
+	border-spacing: 2px 0;
+	vertical-align: middle;
+	margin: 0 auto;
+	padding: 1vh 0;
+`
+const Li = styled.li`
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+`;
+
+const Anchor = styled.a`
+	display: block;
+	font-size: 30px;
+	padding: 0 3vw;
 `;
 
 const Home = () => {
@@ -34,6 +57,7 @@ const Home = () => {
 		<Layout>
 			<Head>
 				<title>{ 'ekuinox.dev' }</title>
+				<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 			</Head>
 			<Main>
 					<Avatar src={ 'https://github.com/ekuinox.png' } />
@@ -42,6 +66,19 @@ const Home = () => {
 						こんにちは。関西でプログラマをやることで生きているオタクです。
 						漫画と音楽が好きです。どうして私が美術科に!?とAiobahnを推しています。
 					` }</Paragraph>
+					<Ul>
+						{ [
+								[ 'https://twitter.com/remokusu', 'ant-design:twitter-outlined' ],
+								[ 'https://github.com/ekuinox', 'cib:github'],
+								[ 'mailto:depkey@me.com', 'ant-design:mail-filled' ]
+							].map(([ url, icon ]) => (
+								<Li key={ url }>
+									<Anchor href={ url }>
+										<span className="iconify" data-icon={ icon } data-inline="false" />
+									</Anchor>
+								</Li>
+							)) }
+					</Ul>
 			</Main>
   	</Layout>
   );
