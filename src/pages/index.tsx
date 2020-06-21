@@ -2,6 +2,10 @@ import Head from 'next/head';
 import { Layout } from '../components/layout';
 import styled from 'styled-components';
 import media from "styled-media-query";
+import { Icon } from '@iconify/react';
+import TwitterIcon from '@iconify/icons-ant-design/twitter-outlined';
+import GitHubIcon from '@iconify/icons-ant-design/github-outlined';
+import EmailIcon from '@iconify/icons-ant-design/mail-outlined'
 
 const Main = styled.main`
 	${ media.lessThan('medium')`
@@ -57,7 +61,6 @@ const Home = () => {
 		<Layout>
 			<Head>
 				<title>{ 'ekuinox.dev' }</title>
-				<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 			</Head>
 			<Main>
 					<Avatar src={ 'https://github.com/ekuinox.png' } />
@@ -68,13 +71,13 @@ const Home = () => {
 					` }</Paragraph>
 					<Ul>
 						{ [
-								[ 'https://twitter.com/remokusu', 'ant-design:twitter-outlined' ],
-								[ 'https://github.com/ekuinox', 'cib:github'],
-								[ 'mailto:depkey@me.com', 'ant-design:mail-filled' ]
-							].map(([ url, icon ]) => (
+								{ url: 'https://twitter.com/remokusu', icon: TwitterIcon },
+								{ url: 'https://github.com/ekuinox', icon: GitHubIcon },
+								{ url: 'mailto:depkey@me.com', icon: EmailIcon }
+							].map(({ url, icon }) => (
 								<Li key={ url }>
 									<Anchor href={ url }>
-										<span className="iconify" data-icon={ icon } data-inline="false" />
+										<Icon icon={ icon } />
 									</Anchor>
 								</Li>
 							)) }
