@@ -27,11 +27,20 @@ const AvatarRotation = keyframes`
   to { transform: rotate(-360deg); }
 `;
 
-const Avatar = styled.img<{ rotate: boolean }>`
+const Avatar = styled(
+  ({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    rotate: _rotate,
+    ...props
+  }: React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  > & { rotate: boolean }) => <img {...props} />
+)`
   height: 150px;
   border-radius: 50%;
-  ${({ rotate }) =>
-    rotate
+  ${(props) =>
+    props.rotate
       ? css`
           animation: ${AvatarRotation} infinite 1s linear;
         `
@@ -100,7 +109,6 @@ const Social = {
 
 const Home = (): JSX.Element => {
   const [rotate, setRotate] = useState(false);
-  const flipRotation = () => setRotate(!rotate);
   return (
     <Layout>
       <Head>
@@ -110,8 +118,7 @@ const Home = (): JSX.Element => {
         <Avatar
           src={'https://github.com/ekuinox.png'}
           rotate={rotate}
-          onClick={flipRotation}
-          onTouchEnd={flipRotation}
+          onClick={() => setRotate(!rotate)}
         />
         <H1>{'ekuinox | れもくす'}</H1>
         <Social.Ul>
