@@ -31,31 +31,57 @@ const H1 = styled.h1`
   padding: 1vh 0;
 `;
 
+const H2 = styled.h2`
+  font-size: 15px;
+  padding: 1vh 0;
+`;
+
 const Paragraph = styled.p`
   margin: auto;
   word-wrap: break-word;
   padding: 1vh 0;
 `;
 
-const Ul = styled.ul`
-  display: table;
-  border-collapse: separate;
-  border-spacing: 2px 0;
-  vertical-align: middle;
-  margin: 0 auto;
-  padding: 1vh 0;
-`;
-const Li = styled.li`
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  padding: 0 3vw;
-`;
+const Work = {
+  Ul: styled.ul`
+    display: table;
+    margin: 0 auto;
+    padding: 1vh 0;
+  `,
+  Li: styled.li`
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 1vh;
+    padding: 1vh;
+    border-width: 1vh;
+    border: solid;
+  `,
+  Anchor: styled.a`
+    font-size: 2vh;
+  `,
+};
 
-const Anchor = styled.a`
-  display: block;
-  font-size: 30px;
-`;
+const Social = {
+  Ul: styled.ul`
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px 0;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 1vh 0;
+  `,
+  Li: styled.li`
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 3vw;
+  `,
+  Anchor: styled.a`
+    display: block;
+    font-size: 30px;
+  `,
+};
 
 const Home = (): JSX.Element => {
   return (
@@ -66,23 +92,35 @@ const Home = (): JSX.Element => {
       <Main>
         <Avatar src={'https://github.com/ekuinox.png'} />
         <H1>{'ekuinox | れもくす'}</H1>
-        <Paragraph>{`
-						こんにちは。関西でプログラマをやることで生きているオタクです。
-						漫画と音楽が好きです。どうして私が美術科に!?とAiobahnを推しています。
-					`}</Paragraph>
-        <Ul>
+        <Social.Ul>
           {[
             { url: 'https://twitter.com/remokusu', icon: TwitterIcon },
             { url: 'https://github.com/ekuinox', icon: GitHubIcon },
             { url: 'mailto:depkey@me.com', icon: EmailIcon },
           ].map(({ url, icon }) => (
-            <Li key={url}>
-              <Anchor href={url}>
+            <Social.Li key={url}>
+              <Social.Anchor href={url}>
                 <Icon icon={icon} />
-              </Anchor>
-            </Li>
+              </Social.Anchor>
+            </Social.Li>
           ))}
-        </Ul>
+        </Social.Ul>
+        <Paragraph>{`
+						こんにちは。関西でプログラマをやることで生きているオタクです。
+						漫画と音楽が好きです。どうして私が美術科に!?とAiobahnを推しています。
+					`}</Paragraph>
+        <H2>{'作ったものとか'}</H2>
+        <Work.Ul>
+          {[
+            ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
+            ['https://github.com/ekuinox/Fogo', 'ekuinox/Fogo'],
+            ['https://github.com/mcymze/Khaos', 'mcymze/Khaos'],
+          ].map(([url, title]) => (
+            <Work.Li key={url}>
+              <Work.Anchor href={url}>{title}</Work.Anchor>
+            </Work.Li>
+          ))}
+        </Work.Ul>
       </Main>
     </Layout>
   );
