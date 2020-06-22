@@ -49,12 +49,12 @@ const Li = styled.li`
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding: 0 3vw;
 `;
 
 const Anchor = styled.a`
   display: block;
   font-size: 30px;
-  padding: 0 3vw;
 `;
 
 const Home = (): JSX.Element => {
