@@ -109,7 +109,6 @@ const Social = {
 
 const Home = (): JSX.Element => {
   const [rotate, setRotate] = useState(false);
-  const flipRotation = () => setRotate(!rotate);
   return (
     <Layout>
       <Head>
@@ -119,8 +118,7 @@ const Home = (): JSX.Element => {
         <Avatar
           src={'https://github.com/ekuinox.png'}
           rotate={rotate}
-          onClick={flipRotation}
-          onTouchEnd={flipRotation}
+          onClick={() => setRotate(!rotate)}
         />
         <H1>{'ekuinox | れもくす'}</H1>
         <Social.Ul>
