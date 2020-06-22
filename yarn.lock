@@ -916,6 +916,10 @@
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@iconify/icons-ant-design/-/icons-ant-design-1.0.8.tgz#7cea4ea3a0467096dcba2ba050c72fe14fefe04f"
 
+"@iconify/icons-cib@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-cib/-/icons-cib-1.0.3.tgz#7da364c30507d41ed51337df81805ebc0a82ec53"
+
 "@iconify/react@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.3.tgz#ebe4d3e5f5dea23cd6a9634acd7a0a25c7414a59"
