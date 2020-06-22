@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react';
 import TwitterIcon from '@iconify/icons-ant-design/twitter-outlined';
 import GitHubIcon from '@iconify/icons-ant-design/github-outlined';
 import EmailIcon from '@iconify/icons-ant-design/mail-outlined';
+import SteamIcon from '@iconify/icons-cib/steam';
 
 const Main = styled.main`
   ${media.lessThan('medium')`
@@ -99,6 +100,7 @@ const Home = (): JSX.Element => {
           {[
             { url: 'https://twitter.com/remokusu', icon: TwitterIcon },
             { url: 'https://github.com/ekuinox', icon: GitHubIcon },
+            { url: 'https://steamcommunity.com/id/lm0x', icon: SteamIcon },
             { url: 'mailto:depkey@me.com', icon: EmailIcon },
           ].map(({ url, icon }) => (
             <Social.Li key={url}>
