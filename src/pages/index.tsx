@@ -33,7 +33,10 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: 15px;
-  padding: 1vh 0;
+`;
+
+const Hr = styled.hr`
+  padding: 2vh 0;
 `;
 
 const Paragraph = styled.p`
@@ -109,12 +112,13 @@ const Home = (): JSX.Element => {
 						こんにちは。関西でプログラマをやることで生きているオタクです。
 						漫画と音楽が好きです。どうして私が美術科に!?とAiobahnを推しています。
 					`}</Paragraph>
+        <Hr />
         <H2>{'作ったものとか'}</H2>
         <Work.Ul>
           {[
-            ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
             ['https://github.com/ekuinox/Fogo', 'ekuinox/Fogo'],
             ['https://github.com/mcymze/Khaos', 'mcymze/Khaos'],
+            ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
           ].map(([url, title]) => (
             <Work.Li key={url}>
               <Work.Anchor href={url}>{title}</Work.Anchor>
