@@ -27,11 +27,20 @@ const AvatarRotation = keyframes`
   to { transform: rotate(-360deg); }
 `;
 
-const Avatar = styled.img<{ rotate: boolean }>`
+const Avatar = styled(
+  ({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    rotate: _rotate,
+    ...props
+  }: React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  > & { rotate: boolean }) => <img {...props} />
+)`
   height: 150px;
   border-radius: 50%;
-  ${({ rotate }) =>
-    rotate
+  ${(props) =>
+    props.rotate
       ? css`
           animation: ${AvatarRotation} infinite 1s linear;
         `
