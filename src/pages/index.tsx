@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { Layout } from '../components/layout';
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import media from 'styled-media-query';
 import { Icon } from '@iconify/react';
 import TwitterIcon from '@iconify/icons-ant-design/twitter-outlined';
@@ -22,9 +22,20 @@ const Main = styled.main`
   text-align: center;
 `;
 
-const Avatar = styled.img`
+const AvatarRotation = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+`;
+
+const Avatar = styled.img<{ rotate: boolean }>`
   height: 150px;
   border-radius: 50%;
+  ${({ rotate }) =>
+    rotate
+      ? css`
+          animation: ${AvatarRotation} infinite 1s linear;
+        `
+      : ''}
 `;
 
 const H1 = styled.h1`
@@ -88,13 +99,20 @@ const Social = {
 };
 
 const Home = (): JSX.Element => {
+  const [rotate, setRotate] = useState(false);
+  const flipRotation = () => setRotate(!rotate);
   return (
     <Layout>
       <Head>
         <title>{'ekuinox.dev'}</title>
       </Head>
       <Main>
-        <Avatar src={'https://github.com/ekuinox.png'} />
+        <Avatar
+          src={'https://github.com/ekuinox.png'}
+          rotate={rotate}
+          onClick={flipRotation}
+          onTouchEnd={flipRotation}
+        />
         <H1>{'ekuinox | れもくす'}</H1>
         <Social.Ul>
           {[
