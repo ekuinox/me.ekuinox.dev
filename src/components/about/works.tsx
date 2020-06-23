@@ -1,5 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+
+/**
+ * 成果物のUrlとタイトルのペアのリスト
+ */
+const deliverables: [string, string][] = [
+  ['https://github.com/ekuinox/Fogo', 'ekuinox/Fogo'],
+  ['https://github.com/mcymze/Khaos', 'mcymze/Khaos'],
+  ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
+];
 
 const Ul = styled.ul`
   display: table;
@@ -25,20 +34,36 @@ const Label = styled.label`
   font-size: 15px;
 `;
 
-/**
- * 成果物のUrlとタイトルのペアのリスト
- */
-const deliverables: [string, string][] = [
-  ['https://github.com/ekuinox/Fogo', 'ekuinox/Fogo'],
-  ['https://github.com/mcymze/Khaos', 'mcymze/Khaos'],
-  ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
-];
+const Accordion = styled(
+  ({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    isOpened,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    durations,
+    ...props
+  }: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > & {
+    isOpened: boolean;
+    durations?: { [key in 'open' | 'close']: number };
+  }) => <div {...props} />
+)`
+  max-height: ${(props) => (props.isOpened ? '100%' : '0')};
+  overflow: hidden;
+  transition: max-height;
+  ${(props) =>
+    props.isOpened
+      ? props.durations?.close ?? css`10ms`
+      : props.durations?.open ?? css`10ms`};
+`;
 
 export const Works = (): JSX.Element => {
+  const [isOpened, setOpened] = useState(false);
   return (
-    <div>
-      <Label>{'作ったものとか'}</Label>
-      <div>
+    <>
+      <Label onClick={() => setOpened(!isOpened)}>{'私の制作物'}</Label>
+      <Accordion isOpened={isOpened}>
         <Ul>
           {deliverables.map(([url, title]) => (
             <Li key={url}>
@@ -46,7 +71,7 @@ export const Works = (): JSX.Element => {
             </Li>
           ))}
         </Ul>
-      </div>
-    </div>
+      </Accordion>
+    </>
   );
 };
