@@ -18,7 +18,6 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   display: block;
-  vertical-align: middle;
   text-align: center;
   margin: 1vh;
   padding: 1vh;
