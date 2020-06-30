@@ -46,7 +46,7 @@ const Social = {
 
 export const About = (): JSX.Element => (
   <>
-    <Avatar src={'https://github.com/ekuinox.png'} />
+    <Avatar src={'/assets/avatar.jpg'} />
     <H1>{'ekuinox | れもくす'}</H1>
     <Social.Ul>
       {[
