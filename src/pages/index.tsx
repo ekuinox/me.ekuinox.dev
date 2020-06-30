@@ -8,11 +8,11 @@ import { About } from '../components/about';
 const Main = styled.main`
   ${media.lessThan('medium')`
 		width: 100%;
-		padding: 5vh;
+		padding: 1vh 5vw;
 	`}
   ${media.greaterThan('medium')`
 		width: 50%;
-		padding: 5%;
+		padding: 2.5% 5%;
 		`}
 	margin: auto;
   text-align: center;
