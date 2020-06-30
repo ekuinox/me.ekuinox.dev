@@ -67,7 +67,9 @@ export const Works = (): JSX.Element => {
           {deliverables.map(([url, title, desc]) => (
             <Li key={url}>
               <div>
-                <Anchor href={url}>{title}</Anchor>
+                <Anchor href={url} target="_blank" rel="noreferrer noopener">
+                  {title}
+                </Anchor>
                 <Paragraph>{desc}</Paragraph>
               </div>
             </Li>
