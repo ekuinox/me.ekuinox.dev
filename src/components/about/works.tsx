@@ -69,7 +69,6 @@ export const Works = (): JSX.Element => {
             </Li>
           ))}
         </Ul>
-        <hr />
       </Accordion>
     </Box>
   );
