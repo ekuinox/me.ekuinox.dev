@@ -14,4 +14,7 @@ export const Avatar = styled(
 )`
   height: 150px;
   border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f26f9d;
 `;
