@@ -6,7 +6,12 @@ export const Avatar = styled(
   (props: { src: string; alt?: string }): JSX.Element => (
     <motion.img
       initial={{ scale: 0.8 }}
-      animate={{ scale: 1 }}
+      animate={{
+        scale: 1,
+        borderColor: '#f26f9d',
+        borderWidth: '2px',
+        borderStyle: 'solid',
+      }}
       whileTap={{ scale: 0.9 }}
       {...props}
     />
@@ -14,8 +19,5 @@ export const Avatar = styled(
 )`
   height: 150px;
   border-radius: 50%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #f26f9d;
   margin: 1vh 0;
 `;
