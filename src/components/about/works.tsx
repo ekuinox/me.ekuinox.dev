@@ -15,7 +15,6 @@ const deliverables: [string, string][] = [
 const Ul = styled.ul`
   display: table;
   margin: 0 auto;
-  padding: 1vh 0;
 `;
 
 const Li = styled.li`
@@ -23,8 +22,6 @@ const Li = styled.li`
   text-align: center;
   margin: 1vh;
   padding: 1vh;
-  border-width: 1vh;
-  border: solid;
 `;
 
 const Anchor = styled.a`
