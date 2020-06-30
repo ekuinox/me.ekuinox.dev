@@ -16,7 +16,6 @@ export const Label = styled(
   font-size: 20px;
   cursor: pointer;
   margin: auto;
-  padding: 1% 25%;
-  border-radius: 10% / 30%;
-  border: solid;
+  text-decoration: underline;
+  letter-spacing: 2px;
 `;
