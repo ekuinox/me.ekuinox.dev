@@ -33,7 +33,7 @@ export const Works = (): JSX.Element => {
   return (
     <>
       <Label onClick={() => setExpanded(!expanded)} isActive={expanded}>
-        {'私の制作物'}
+        {'works'}
       </Label>
       <Accordion expanded={expanded}>
         <Ul>
