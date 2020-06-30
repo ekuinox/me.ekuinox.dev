@@ -7,7 +7,11 @@ import { Label } from './label';
  * 成果物のUrlとタイトルのペアのリスト
  */
 const deliverables: [string, string, string][] = [
-  ['https://github.com/ekuinox/Fogo', 'Fogo', 'C++で実装したECC的なライブラリ'],
+  [
+    'https://github.com/ekuinox/Fogo',
+    'Fogo',
+    'C++で実装したEntity Component System的なライブラリ',
+  ],
   [
     'https://github.com/mcymze/Khaos',
     'Khaos',
