@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const Avatar = styled(
   (props: { src: string; alt?: string }): JSX.Element => (
     <motion.img
-      initial={{ scale: 0.5 }}
+      initial={{ scale: 0.8 }}
       animate={{ scale: 1 }}
       whileTap={{ scale: 0.9 }}
       {...props}
