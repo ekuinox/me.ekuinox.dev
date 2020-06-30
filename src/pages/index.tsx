@@ -1,157 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Layout } from '../components/layout';
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
 import media from 'styled-media-query';
-import { Icon } from '@iconify/react';
-import TwitterIcon from '@iconify/icons-ant-design/twitter-outlined';
-import GitHubIcon from '@iconify/icons-ant-design/github-outlined';
-import EmailIcon from '@iconify/icons-ant-design/mail-outlined';
-import SteamIcon from '@iconify/icons-cib/steam';
+import { Layout } from '../components/layout';
+import { About } from '../components/about';
 
 const Main = styled.main`
   ${media.lessThan('medium')`
 		width: 100%;
-		padding: 5vh;
+		padding: 1vh 5vw;
 	`}
   ${media.greaterThan('medium')`
 		width: 50%;
-		padding: 5%;
+		padding: 2.5% 5%;
 		`}
 	margin: auto;
   text-align: center;
 `;
 
-const AvatarRotation = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-`;
-
-const Avatar = styled(
-  ({
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    rotate: _rotate,
-    ...props
-  }: React.DetailedHTMLProps<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  > & { rotate: boolean }) => <img {...props} />
-)`
-  height: 150px;
-  border-radius: 50%;
-  ${(props) =>
-    props.rotate
-      ? css`
-          animation: ${AvatarRotation} infinite 1s linear;
-        `
-      : ''}
-`;
-
-const H1 = styled.h1`
-  font-size: 30px;
-  padding: 1vh 0;
-`;
-
-const H2 = styled.h2`
-  font-size: 15px;
-`;
-
-const Hr = styled.hr`
-  padding: 2vh 0;
-`;
-
-const Paragraph = styled.p`
-  margin: auto;
-  word-wrap: break-word;
-  padding: 1vh 0;
-`;
-
-const Work = {
-  Ul: styled.ul`
-    display: table;
-    margin: 0 auto;
-    padding: 1vh 0;
-  `,
-  Li: styled.li`
-    display: block;
-    vertical-align: middle;
-    text-align: center;
-    margin: 1vh;
-    padding: 1vh;
-    border-width: 1vh;
-    border: solid;
-  `,
-  Anchor: styled.a`
-    font-size: 2vh;
-  `,
-};
-
-const Social = {
-  Ul: styled.ul`
-    display: table;
-    border-collapse: separate;
-    border-spacing: 2px 0;
-    vertical-align: middle;
-    margin: 0 auto;
-    padding: 1vh 0;
-  `,
-  Li: styled.li`
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0 3vw;
-  `,
-  Anchor: styled.a`
-    display: block;
-    font-size: 30px;
-  `,
-};
-
 const Home = (): JSX.Element => {
-  const [rotate, setRotate] = useState(false);
   return (
     <Layout>
       <Head>
         <title>{'ekuinox.dev'}</title>
       </Head>
       <Main>
-        <Avatar
-          src={'https://github.com/ekuinox.png'}
-          rotate={rotate}
-          onClick={() => setRotate(!rotate)}
-        />
-        <H1>{'ekuinox | れもくす'}</H1>
-        <Social.Ul>
-          {[
-            { url: 'https://twitter.com/remokusu', icon: TwitterIcon },
-            { url: 'https://github.com/ekuinox', icon: GitHubIcon },
-            { url: 'https://steamcommunity.com/id/lm0x', icon: SteamIcon },
-            { url: 'mailto:depkey@me.com', icon: EmailIcon },
-          ].map(({ url, icon }) => (
-            <Social.Li key={url}>
-              <Social.Anchor href={url}>
-                <Icon icon={icon} />
-              </Social.Anchor>
-            </Social.Li>
-          ))}
-        </Social.Ul>
-        <Paragraph>{`
-						こんにちは。関西でプログラマをやることで生きているオタクです。
-						漫画と音楽が好きです。どうして私が美術科に!?とAiobahnを推しています。
-					`}</Paragraph>
-        <Hr />
-        <H2>{'作ったものとか'}</H2>
-        <Work.Ul>
-          {[
-            ['https://github.com/ekuinox/Fogo', 'ekuinox/Fogo'],
-            ['https://github.com/mcymze/Khaos', 'mcymze/Khaos'],
-            ['https://github.com/ekuinox/red_drink', 'ekuinox/red_drink'],
-          ].map(([url, title]) => (
-            <Work.Li key={url}>
-              <Work.Anchor href={url}>{title}</Work.Anchor>
-            </Work.Li>
-          ))}
-        </Work.Ul>
+        <About />
       </Main>
     </Layout>
   );
