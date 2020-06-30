@@ -56,7 +56,7 @@ export const About = (): JSX.Element => (
         { url: 'mailto:depkey@me.com', icon: EmailIcon },
       ].map(({ url, icon }) => (
         <Social.Li key={url}>
-          <Social.Anchor href={url}>
+          <Social.Anchor href={url} target="_blank" rel="noreferrer noopener">
             <Icon icon={icon} />
           </Social.Anchor>
         </Social.Li>
