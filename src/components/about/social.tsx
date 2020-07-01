@@ -30,15 +30,17 @@ const Box = styled.div`
   padding: 1vh 0;
 `;
 
+const socials = [
+  ['https://twitter.com/remokusu', TwitterIcon],
+  ['https://github.com/ekuinox', GitHubIcon],
+  ['https://steamcommunity.com/id/lm0x', SteamIcon],
+  ['mailto:depkey@me.com', EmailIcon],
+] as const;
+
 export const Social = (): JSX.Element => (
   <Box>
     <Ul>
-      {[
-        { url: 'https://twitter.com/remokusu', icon: TwitterIcon },
-        { url: 'https://github.com/ekuinox', icon: GitHubIcon },
-        { url: 'https://steamcommunity.com/id/lm0x', icon: SteamIcon },
-        { url: 'mailto:depkey@me.com', icon: EmailIcon },
-      ].map(({ url, icon }) => (
+      {socials.map(([url, icon]) => (
         <Li key={url}>
           <Anchor href={url} target="_blank" rel="noreferrer noopener">
             <Icon icon={icon} />
