@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Social } from './social';
 import { Works } from './works';
 import { Avatar } from './avatar';
+import { Skills } from './skills';
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -30,5 +31,6 @@ export const About = (): JSX.Element => (
     `}</Bio>
     <Hr />
     <Works />
+    <Skills />
   </>
 );
