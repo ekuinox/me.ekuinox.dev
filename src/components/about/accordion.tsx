@@ -16,8 +16,8 @@ export const Accordion = (props: {
         animate="open"
         exit="collapsed"
         variants={{
-          open: { opacity: 1, height: 'auto' },
-          collapsed: { opacity: 0, height: 0 },
+          open: { opacity: 1, y: 0, height: 'auto' },
+          collapsed: { opacity: 0, y: '1vh', height: 0 },
         }}
         transition={{ duration: 0.4 }}
       >
