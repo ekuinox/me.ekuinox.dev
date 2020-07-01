@@ -10,7 +10,7 @@ const H1 = styled.h1`
 `;
 
 const Hr = styled.hr`
-  padding: 2vh 0;
+  padding: 1vh 0;
 `;
 
 const Paragraph = styled.p`
