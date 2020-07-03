@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Accordion } from './accordion';
 import { Label } from './label';
@@ -57,7 +57,12 @@ const Body = styled.p`
 
 export const Skills = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  useEffect(() => {
+    if (!expanded) {
+      setSelected(null);
+    }
+  }, [expanded]);
   return (
     <Box>
       <Label onClick={() => setExpanded(!expanded)} isActive={expanded}>
@@ -69,7 +74,7 @@ export const Skills = (): JSX.Element => {
             <Li key={index}>
               <SkillName
                 isActive={index === selected}
-                onClick={() => setSelected(index)}
+                onClick={() => setSelected(index === selected ? null : index)}
               >
                 {name}
               </SkillName>
