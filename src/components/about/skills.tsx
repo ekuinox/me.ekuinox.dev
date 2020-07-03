@@ -43,6 +43,8 @@ const SkillName = styled(
   cursor: pointer;
   margin: auto;
   font-weight: ${(props) => (props.isActive ? 'bold' : 'weight')};
+  text-decoration: underline;
+  letter-spacing: 1px;
   &:hover {
     font-weight: bold;
   }
@@ -50,7 +52,7 @@ const SkillName = styled(
 
 export const Skills = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState(0);
   return (
     <Box>
       <Label onClick={() => setExpanded(!expanded)} isActive={expanded}>
@@ -58,19 +60,19 @@ export const Skills = (): JSX.Element => {
       </Label>
       <Accordion expanded={expanded}>
         <Ul>
-          {skills.map(([name]) => (
-            <Li key={name}>
+          {skills.map(([name], index) => (
+            <Li key={index}>
               <SkillName
-                isActive={name === selected}
-                onClick={() => setSelected(selected === name ? '' : name)}
+                isActive={index === selected}
+                onClick={() => setSelected(index)}
               >
                 {name}
               </SkillName>
             </Li>
           ))}
         </Ul>
-        {skills.map(([name, body]) => (
-          <Accordion key={name} expanded={selected === name}>
+        {skills.map(([, body], index) => (
+          <Accordion key={index} expanded={index === selected}>
             {body}
           </Accordion>
         ))}
