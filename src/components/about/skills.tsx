@@ -50,6 +50,11 @@ const SkillName = styled(
   }
 `;
 
+const Body = styled.p`
+  font-size: 15px;
+  padding: 1vh 0;
+`;
+
 export const Skills = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState(0);
@@ -73,7 +78,7 @@ export const Skills = (): JSX.Element => {
         </Ul>
         {skills.map(([, body], index) => (
           <Accordion key={index} expanded={index === selected}>
-            {body}
+            <Body>{body}</Body>
           </Accordion>
         ))}
       </Accordion>
