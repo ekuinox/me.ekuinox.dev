@@ -21,7 +21,7 @@ const Box = styled.div`
 
 const Ul = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1vh;
