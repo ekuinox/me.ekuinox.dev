@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import { motion } from 'framer-motion';
 import { SnackBar } from './snackbar';
 
 const Message = styled.div`
@@ -22,10 +23,10 @@ const Box = styled.div`
   padding: 1vh 1vw;
 `;
 
-const Anchor = styled.a`
+const Anchor = motion.custom(styled.a`
   text-decoration: underline;
   cursor: pointer;
-`;
+`);
 
 const requiredTappedCount = 7;
 const startingMessageCount = 4;
@@ -66,6 +67,8 @@ export const DevMode = ({ count }: { count: number }): JSX.Element => {
             href="https://github.com/ekuinox/ekuinox.dev"
             target="_blank"
             rel="noreferrer noopener"
+            initial={{ opacity: 0, y: 0, height: 'auto' }}
+            animate={{ opacity: 1, y: '1vh', height: 0 }}
           >
             {'contribute to ekuinox.dev'}
           </Anchor>
