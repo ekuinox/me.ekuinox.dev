@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Avatar = styled(
-  (props: { src: string; alt?: string }): JSX.Element => (
+  (props: { src: string; alt?: string; onClick?: () => void }): JSX.Element => (
     <motion.img
       initial={{ scale: 0.8 }}
       animate={{
