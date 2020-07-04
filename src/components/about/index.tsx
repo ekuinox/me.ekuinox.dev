@@ -26,7 +26,7 @@ export const About = (): JSX.Element => {
   const [count, setCount] = React.useState(0);
   return (
     <>
-      <Avatar src={'/assets/avatar.jpg'} />
+      <Avatar src={'/assets/avatar.jpg'} onClick={() => setCount(count + 1)} />
       <H1>{'ekuinox | れもくす'}</H1>
       <Social />
       <Bio>{`
@@ -37,7 +37,6 @@ export const About = (): JSX.Element => {
       <Works />
       <Skills />
       <Favorites />
-      <button onClick={() => setCount(count + 1)}>{count}</button>
       <DevMode count={count} />
     </>
   );
