@@ -34,6 +34,7 @@ const becameDeveloperMessage = 'デベロッパーモードになりました';
 const alreadyDeveloperMessage = 'はやくコントリビュートしてください！';
 const makeCountMessage = (count: number) =>
   `デベロッパーになるにはあと${requiredTappedCount - count}回タップしてね`;
+const timeDelayMessageHidden = 5000;
 
 export const DevMode = ({ count }: { count: number }): JSX.Element => {
   const [message, setMessage] = useState('');
@@ -53,7 +54,7 @@ export const DevMode = ({ count }: { count: number }): JSX.Element => {
   }, [count]);
   useEffect(() => {
     if (message) {
-      setTimeout(() => setMessage(''), 5000);
+      setTimeout(() => setMessage(''), timeDelayMessageHidden);
     }
   }, [message]);
   return (
