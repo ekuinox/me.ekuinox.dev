@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { SnackBar } from './snackbar';
 import media from 'styled-media-query';
+import { SnackBar } from './snackbar';
 
 const Message = styled.div`
   background-color: #65fcd9;
@@ -18,29 +18,59 @@ const Message = styled.div`
 	`}
 `;
 
+const Box = styled.div`
+  padding: 1vh 1vw;
+`;
+
+const Anchor = styled.a`
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
+const requiredTappedCount = 7;
+const startingMessageCount = 4;
+const becameDeveloperMessage = 'デベロッパーモードになりました';
+const alreadyDeveloperMessage = 'はやくコントリビュートしてください！';
+const makeCountMessage = (count: number) =>
+  `デベロッパーになるにはあと${requiredTappedCount - count}回タップしてね`;
+
 export const DevMode = ({ count }: { count: number }): JSX.Element => {
-  const [message, setMessage] = useState('デベロッパーになるにはあと4回タップしてね');
-  const [enabled, setEnabled] = useState(true);
+  const [message, setMessage] = useState('');
   useEffect(() => {
-    if (count === 3) {
-      setEnabled(true);
-      setMessage('デベロッパーになるにはあと4回タップしてね');
+    if (requiredTappedCount < count) {
+      setMessage(alreadyDeveloperMessage);
       return;
     }
-    if (count === 7) {
-      setEnabled(true);
-      setMessage('デベロッパーモードになりました');
+    if (count === requiredTappedCount) {
+      setMessage(becameDeveloperMessage);
+      return;
+    }
+    if (count >= startingMessageCount) {
+      setMessage(makeCountMessage(count));
       return;
     }
   }, [count]);
   useEffect(() => {
-    if (enabled) {
-      //setTimeout(() => setEnabled(false), 5000);
+    if (message) {
+      setTimeout(() => setMessage(''), 5000);
     }
-  });
+  }, [message]);
   return (
-    <SnackBar enabled={enabled}>
-      <Message>{message}</Message>
-    </SnackBar>
+    <>
+      <SnackBar enabled={message != ''}>
+        <Message>{message}</Message>
+      </SnackBar>
+      {count >= requiredTappedCount && (
+        <Box>
+          <Anchor
+            href="https://github.com/ekuinox/ekuinox.dev"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {'contribute to ekuinox.dev'}
+          </Anchor>
+        </Box>
+      )}
+    </>
   );
 };
