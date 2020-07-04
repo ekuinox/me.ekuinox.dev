@@ -8,6 +8,7 @@ export const Label = styled(
     ...props
   }: HTMLMotionProps<'label'> & { isActive: boolean }) => (
     <motion.label
+      role="button"
       initial={{ textDecorationColor: '#000000' }}
       animate={{ textDecorationColor: isActive ? '#006782' : '#000000' }}
       {...props}

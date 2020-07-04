@@ -76,6 +76,7 @@ export const Skills = (): JSX.Element => {
           {skills.map(([name], index) => (
             <Li key={index}>
               <SkillName
+                role="button"
                 isActive={index === selected}
                 onClick={() => setSelected(index === selected ? null : index)}
               >
