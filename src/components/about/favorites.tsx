@@ -38,11 +38,14 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  padding: 0.3vh 0.5vw;
+  padding: 8px 3px;
 `;
 
 const Favorite = styled.p`
   margin: auto;
+  padding: 1px 0;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
 `;
 
 export const Favorites = (): JSX.Element => {
