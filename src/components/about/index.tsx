@@ -4,6 +4,7 @@ import { Social } from './social';
 import { Works } from './works';
 import { Avatar } from './avatar';
 import { Skills } from './skills';
+import { Favorites } from './favorites';
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -32,5 +33,6 @@ export const About = (): JSX.Element => (
     <Hr />
     <Works />
     <Skills />
+    <Favorites />
   </>
 );
