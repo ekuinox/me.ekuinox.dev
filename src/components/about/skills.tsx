@@ -45,8 +45,10 @@ const SkillName = styled(
   font-weight: ${(props) => (props.isActive ? 'bold' : 'weight')};
   text-decoration: underline;
   letter-spacing: 1px;
-  &:hover {
-    font-weight: bold;
+  @media screen and (hover: hover) {
+    &:hover {
+      font-weight: bold;
+    }
   }
 `;
 
