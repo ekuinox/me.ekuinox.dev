@@ -19,4 +19,5 @@ export const Label = styled(
   margin: auto;
   text-decoration: underline;
   letter-spacing: 2px;
+  user-select: none;
 `;
