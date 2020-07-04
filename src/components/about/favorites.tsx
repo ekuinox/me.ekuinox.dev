@@ -3,18 +3,45 @@ import styled from 'styled-components';
 import { Accordion } from './accordion';
 import { Label } from './label';
 
-const favorites = [
-  ['どうして私が美術科に!?'],
-  ['きんいろモザイク'],
-  ['球詠'],
-  ['海色マーチ'],
-  ['放課後すとりっぷ'],
-  ['ぱぺっとコール!'],
-  ['ななどなどなど'],
-  ['キャッチャー・イン・ザ・ライム'],
-  ['Aiobahn'],
-  ['RetroVision'],
-  ['Da Tweekaz'],
+const favorites: [string, { url?: string }?][] = [
+  [
+    'どうして私が美術科に!?',
+    { url: 'http://www.dokidokivisual.com/comics/book/past.php?cid=1290' },
+  ],
+  [
+    'きんいろモザイク',
+    { url: 'http://www.dokidokivisual.com/comics/book/past.php?cid=489' },
+  ],
+  [
+    '球詠',
+    { url: 'http://www.dokidokivisual.com/comics/book/index.php?cid=1237' },
+  ],
+  [
+    '海色マーチ',
+    { url: 'http://www.dokidokivisual.com/comics/book/index.php?cid=1542' },
+  ],
+  [
+    '放課後すとりっぷ',
+    { url: 'http://www.dokidokivisual.com/comics/book/index.php?cid=1475' },
+  ],
+  [
+    'ぱぺっとコール!',
+    { url: 'http://www.dokidokivisual.com/comics/book/past.php?cid=1208' },
+  ],
+  [
+    'ななどなどなど',
+    { url: 'http://dokidokivisual.com/comics/book/past.php?cid=1602' },
+  ],
+  [
+    'キャッチャー・イン・ザ・ライム',
+    { url: 'https://bigcomicbros.net/work/6345/' },
+  ],
+  [
+    'Aiobahn',
+    { url: 'https://www.youtube.com/channel/UC3XZCxTQ55JkT35W27Jtbyg' },
+  ],
+  ['RetroVision', { url: 'https://www.youtube.com/user/TH3D4RKR4C3' }],
+  ['Da Tweekaz', { url: 'https://www.youtube.com/user/Tweekaz' }],
   ['Laszlo'],
   ['舐達麻'],
   ['Eminem'],
@@ -57,9 +84,15 @@ export const Favorites = (): JSX.Element => {
       </Label>
       <Accordion expanded={expanded}>
         <Ul>
-          {favorites.map(([favorite], index) => (
+          {favorites.map(([favorite, options], index) => (
             <Li key={index}>
-              <Favorite>{favorite}</Favorite>
+              {options?.url == null ? (
+                <Favorite>{favorite}</Favorite>
+              ) : (
+                <a href={options.url} target="_blank" rel="noreferrer noopener">
+                  <Favorite>{favorite}</Favorite>
+                </a>
+              )}
             </Li>
           ))}
         </Ul>
