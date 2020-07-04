@@ -6,10 +6,10 @@ type Props = HTMLProps<HTMLDivElement> & { enabled: boolean };
 
 const SnackBarBody = styled(motion.div)`
   position: fixed;
-  left: 50%;
   bottom: 1vh;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const SnackBar = ({ enabled, ...props }: Props): JSX.Element => (
