@@ -48,7 +48,7 @@ export const DevMode = ({ count }: { count: number }): JSX.Element => {
     if (timeoutHandler != null) {
       clearTimeout(timeoutHandler);
     }
-    setTimeoutHandler(setTimeout(() => setMessage(''), timeDelayMessageHidden));
+    setTimeoutHandler(setTimeout(() => setMessage(null), timeDelayMessageHidden));
   }, [message]);
   return (
     <>
