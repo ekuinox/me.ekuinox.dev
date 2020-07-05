@@ -37,7 +37,7 @@ const makeMessage = (count: number) => {
     return `あと${requiredCount - count}タップしてください!`;
   return null;
 };
-const timeDelayMessageHidden = 5000;
+const durationMessageVisible = 5000;
 
 export const DevMode = ({ count }: { count: number }): JSX.Element => {
   const [message, setMessage] = useState<string | null>(null);
@@ -48,7 +48,9 @@ export const DevMode = ({ count }: { count: number }): JSX.Element => {
     if (timeoutHandler != null) {
       clearTimeout(timeoutHandler);
     }
-    setTimeoutHandler(setTimeout(() => setMessage(null), timeDelayMessageHidden));
+    setTimeoutHandler(
+      setTimeout(() => setMessage(null), durationMessageVisible)
+    );
   }, [message]);
   return (
     <>
