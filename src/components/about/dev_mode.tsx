@@ -34,7 +34,7 @@ const makeMessage = (count: number) => {
   if (requiredCount < count) return 'はやくコントリビュートしてください!';
   if (count === requiredCount) return 'デベロッパーモードになりました!';
   if (count >= startingMessage)
-    return `あと${requiredCount - count}タップしてください!`;
+    return `あと${requiredCount - count}回タップしてください!`;
   return null;
 };
 const durationMessageVisible = 5000;
