@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { SnackBar } from './snackbar';
 
 const Message = styled.div`
-  background-color: #65fcd9;
+  background-color: #a9dbde;
   color: #003327;
   text-align: center;
   ${media.lessThan('medium')`
