@@ -28,41 +28,34 @@ const Anchor = motion.custom(styled.a`
   cursor: pointer;
 `);
 
-const requiredTappedCount = 7;
-const startingMessageCount = 4;
-const becameDeveloperMessage = 'デベロッパーモードになりました';
-const alreadyDeveloperMessage = 'はやくコントリビュートしてください！';
-const makeCountMessage = (count: number) =>
-  `デベロッパーになるにはあと${requiredTappedCount - count}回タップしてね`;
+const requiredCount = 7;
+const makeMessage = (count: number) => {
+  const startingMessage = 4;
+  if (requiredCount < count) return 'はやくコントリビュートしてください!';
+  if (count === requiredCount) return 'デベロッパーモードになりました!';
+  if (count >= startingMessage)
+    return `あと${requiredCount - count}タップしてください!`;
+  return null;
+};
 const timeDelayMessageHidden = 5000;
 
 export const DevMode = ({ count }: { count: number }): JSX.Element => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState<string | null>(null);
+  const [timeoutHandler, setTimeoutHandler] = useState<number | null>(null);
+  useEffect(() => setMessage(makeMessage(count)), [count]);
   useEffect(() => {
-    if (requiredTappedCount < count) {
-      setMessage(alreadyDeveloperMessage);
-      return;
+    if (message == null) return;
+    if (timeoutHandler != null) {
+      clearTimeout(timeoutHandler);
     }
-    if (count === requiredTappedCount) {
-      setMessage(becameDeveloperMessage);
-      return;
-    }
-    if (count >= startingMessageCount) {
-      setMessage(makeCountMessage(count));
-      return;
-    }
-  }, [count]);
-  useEffect(() => {
-    if (message) {
-      setTimeout(() => setMessage(''), timeDelayMessageHidden);
-    }
+    setTimeoutHandler(setTimeout(() => setMessage(''), timeDelayMessageHidden));
   }, [message]);
   return (
     <>
-      <SnackBar enabled={message != ''}>
+      <SnackBar enabled={message != null}>
         <Message>{message}</Message>
       </SnackBar>
-      {count >= requiredTappedCount && (
+      {count >= requiredCount && (
         <Box>
           <Anchor
             href="https://github.com/ekuinox/ekuinox.dev"
