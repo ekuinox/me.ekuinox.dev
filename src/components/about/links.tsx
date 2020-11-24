@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Accordion } from './accordion';
 import { Label } from './label';
@@ -7,17 +7,13 @@ const Box = styled.div`
   padding: 1vh 1vw;
 `;
 
-const Dl = styled.ul`
-  padding: 1.5vh;
+const Ul = styled.ul`
+  margin: 1vh;
 `;
 
-const Dt = styled.li`
-  padding-bottom: 0.3vh;
+const Li = styled.li`
+  margin: 0.5vh 0;
 `;
-
-const Dd = styled.li`
-`;
-
 
 export const Links = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
@@ -27,9 +23,8 @@ export const Links = (): JSX.Element => {
         {'links'}
       </Label>
       <Accordion expanded={expanded}>
-          <Dl>
-            <Dt>おれが大好きなAiobahnのホームページ</Dt>
-            <Dd>
+          <Ul>
+            <Li>
               <a
                 href='https://aiobahn.net'
                 target='_blank'
@@ -39,8 +34,8 @@ export const Links = (): JSX.Element => {
                   alt='Aiobahnのほーむぺーじ'
                 />
               </a>
-            </Dd>
-          </Dl>
+            </Li>
+          </Ul>
         
       </Accordion>
     </Box>
