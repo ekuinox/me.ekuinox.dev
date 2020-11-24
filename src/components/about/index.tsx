@@ -6,6 +6,7 @@ import { Avatar } from './avatar';
 import { Skills } from './skills';
 import { Favorites } from './favorites';
 import { DevMode } from './dev_mode';
+import { Links } from './links';
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -37,6 +38,7 @@ export const About = (): JSX.Element => {
       <Works />
       <Skills />
       <Favorites />
+      <Links />
       <DevMode count={count} />
     </>
   );
