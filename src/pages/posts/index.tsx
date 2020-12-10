@@ -22,7 +22,7 @@ const Posts = ({ posts }: { posts: Array<Meta & { to: string }> }): JSX.Element 
       <h1>記事一覧</h1>
       <ul>
         {posts.map(({ title, to }, i) => (
-          <li>
+          <li key={i}>
             <Link href={`/posts/${to}`}>{title}</Link>
           </li>
         ))}
