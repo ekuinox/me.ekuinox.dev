@@ -13,7 +13,7 @@ const Main = styled.main`
   ${media.greaterThan('medium')`
 		width: 50%;
 		padding: 2.5% 5%;
-		`}
+	`}
 	margin: auto;
   text-align: center;
 `;
