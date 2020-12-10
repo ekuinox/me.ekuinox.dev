@@ -15,7 +15,7 @@ const deliverables: [string, string, string][] = [
   [
     'https://github.com/mcymze/Khaos',
     'Khaos',
-    'Kotilinで実装したSpigot向けのDigAll',
+    'Kotlinで実装したSpigot向けのDigAll',
   ],
   [
     'https://github.com/mcymze/IntegrativeYmzeServerPlugin',
