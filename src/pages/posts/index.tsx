@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { createReadMetaListTask, Meta } from '../../common/articles';
+import { getMetaList, Meta } from '../../common/articles';
 
 export const getStaticProps = async () => {
   return {
     props: {
-      posts: await createReadMetaListTask()(),
+      posts: await getMetaList(),
     },
   };
 };
