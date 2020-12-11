@@ -40,6 +40,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
+    "extract-mdx-metadata": "^1.0.0",
     "prettier": "^2.0.5",
     "styled-components": "^5.1.1",
     "styled-media-query": "^2.1.2"
