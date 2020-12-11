@@ -8,7 +8,7 @@ const getPosts = async (): Promise<Array<Meta & { to: string }>> => {
   ];
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   return {
     props: {
       posts: await getPosts(),
@@ -23,7 +23,9 @@ const Posts = ({ posts }: { posts: Array<Meta & { to: string }> }): JSX.Element 
       <ul>
         {posts.map(({ title, to }, i) => (
           <li key={i}>
-            <Link href={`/posts/${to}`}>{title}</Link>
+            <Link href={`/posts/${to}`}>
+              <a>{title}</a>
+            </Link>
           </li>
         ))}
       </ul>
