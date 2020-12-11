@@ -1,5 +1,4 @@
-import { PathLike } from 'fs';
-import { readdir, readFile } from 'fs/promises';
+import { PathLike, readdir, readFile } from 'fs';
 import { pipe } from 'fp-ts/lib/pipeable';
 import { map as mapArray } from 'fp-ts/lib/ReadonlyArray';
 import { Task, map as mapTask, flatten as flattenTask, sequenceArray } from 'fp-ts/lib/Task';
@@ -17,15 +16,24 @@ const BaseArticlesPath = './src/pages/posts';
 
 // ディレクトリを読み込むタスク
 const taskReadDir: Task<ReadonlyArray<string>> = () => {
-  return readdir(BaseArticlesPath)
-    .then(mapArray(path => `${BaseArticlesPath}/${path}`));
+  return new Promise((resolve, reject) => readdir(BaseArticlesPath, (err, files) => {
+    if (err != null) {
+      return reject(err);
+    }
+    return mapArray(path => `${BaseArticlesPath}/${path}`)(files);
+  }));
 };
 
 /**
  * readFileタスクを作成する
  * @param path
  */
-const createReadFileTask = (path: PathLike): Task<Buffer> => () => readFile(path);
+const createReadFileTask = (path: PathLike): Task<Buffer> => () => new Promise((resolve, reject) => readFile(path, (err, buffer) => {
+  if (err != null) {
+    return reject(err);
+  }
+  return resolve(buffer);
+}));
 
 /**
  * Meta展開タスクを作成する
