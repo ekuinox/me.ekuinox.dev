@@ -32,6 +32,7 @@ const createReadFileTask = (path: PathLike): Task<Buffer> => () => readFile(path
  * @param buffer 
  */
 const createExtractTask = (buffer: Buffer): Task<Meta> => async () => {
+  // なんか`next`したら2回目からのコンパイルでオブジェクトになっていて、なんもわからん
   if (typeof extractMdxMetadata !== 'function') return extractMdxMetadata;
   return extractMdxMetadata<Meta>(buffer);
 };
