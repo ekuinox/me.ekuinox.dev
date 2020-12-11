@@ -5,4 +5,4 @@ export interface Options<T> {
 export default function extractMdxMetadata<M = unknown>(
   content: Buffer,
   options?: Options<M>
-): Promise<M>;;
+): Promise<M>;
