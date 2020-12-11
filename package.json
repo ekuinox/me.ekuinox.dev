@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
+    "collect": "ts-node --project ./scripts.tsconfig.json ./scripts/collect-meta.ts",
     "build": "next build",
     "export": "next export",
     "deploy": "yarn build && yarn export",
@@ -44,6 +45,7 @@
     "extract-mdx-metadata": "^1.0.0",
     "prettier": "^2.0.5",
     "styled-components": "^5.1.1",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "ts-node": "^9.1.1"
   }
 }
