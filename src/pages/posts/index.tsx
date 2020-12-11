@@ -1,22 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import { Meta } from '../../common/articles';
-
-const getPosts = async (): Promise<Array<Meta & { to: string }>> => {
-  return [
-    { title: 'サンプル', to: 'sample' },
-  ];
-};
+import { getMetaList, Meta } from '../../common/articles';
 
 export const getStaticProps = async () => {
   return {
     props: {
-      posts: await getPosts(),
+      posts: await getMetaList(),
     },
   };
 };
 
-const Posts = ({ posts }: { posts: Array<Meta & { to: string }> }): JSX.Element => {
+const Posts = ({ posts }: { posts: Array<Meta> }): JSX.Element => {
   return (
     <div>
       <h1>記事一覧</h1>
