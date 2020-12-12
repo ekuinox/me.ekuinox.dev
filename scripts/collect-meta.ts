@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from 'fs/promises';
+import { readdir, readFile, writeFile } from 'fs-extra';
 import { pipe } from 'fp-ts/lib/pipeable';
 import { map as mapArray, filter as filterArray } from 'fp-ts/lib/ReadonlyArray';
 import { Task, map as mapTask, flatten as flattenTask, sequenceArray } from 'fp-ts/lib/Task';
