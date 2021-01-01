@@ -12,8 +12,22 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  margin: 0.5vh 0;
+  margin: 1vh 0;
 `;
+
+const urls: ReadonlyArray<readonly [url: string, title: string | JSX.Element]> = [
+  [
+    'https://owo7.com',
+    'owo7'
+  ],
+  [
+    'https://aiobahn.net',
+    <img
+      src='https://aiobahn.net/img/abhn_bird.7fc464b0.gif'
+      alt='Aiobahnのほーむぺーじ'
+    />
+  ],
+];
 
 export const Links = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
@@ -24,19 +38,14 @@ export const Links = (): JSX.Element => {
       </Label>
       <Accordion expanded={expanded}>
           <Ul>
-            <Li>
-              <a
-                href='https://aiobahn.net'
-                target='_blank'
-              >
-                <img
-                  src='https://aiobahn.net/img/abhn_bird.7fc464b0.gif'
-                  alt='Aiobahnのほーむぺーじ'
-                />
-              </a>
-            </Li>
+            {urls.map(([url, title]) => (
+              <Li>
+                <a href={url} target='_blank'>
+                  {title}
+                </a>
+              </Li>
+            ))}
           </Ul>
-        
       </Accordion>
     </Box>
   );
