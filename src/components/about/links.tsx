@@ -15,7 +15,7 @@ const Li = styled.li`
   margin: 1vh 0;
 `;
 
-const urls: ReadonlyArray<readonly [url: string, title: string | JSX.Element]> = [
+const urls: ReadonlyArray<readonly [string, string | JSX.Element]> = [
   [
     'https://owo7.com',
     'owo7'
