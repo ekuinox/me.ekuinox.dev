@@ -30,6 +30,7 @@
     "typescript": "^3.9.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "@iconify/icons-ant-design": "^1.0.8",
     "@iconify/icons-cib": "^1.0.3",
     "@iconify/react": "^1.1.3",
