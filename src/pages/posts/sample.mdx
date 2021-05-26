@@ -1,0 +1,47 @@
+export const meta = {
+    title: 'サンプル',
+    to: 'sample',
+}
+
+import { Article } from '../../components/Article';
+
+# h1
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6
+
+特に書くことがないのだわ！
+
+**aaa**
+
+*a*
+
+- oooo
+- eeee
+  * hyooo
+  * haeee
+    - xxxxwww
+- xxxxx
+
+```cpp
+#include <iostream>
+
+auto main(void) -> int {
+    std::cout << "hello world" << std::endl;
+    return 0;
+}
+```
+
+```rust
+fn main() {
+    println!("hello world");
+}
+```
+export default ({ children }) => <Article {...meta}>{children}</Article>
