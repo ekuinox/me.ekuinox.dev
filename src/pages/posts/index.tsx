@@ -21,7 +21,10 @@ const Posts = ({ posts }: { posts: Array<Meta> }): JSX.Element => {
     <Article title='記事一覧' to='/posts'>
       <ul>
         {posts.map(({ title, to }, i) => (
-          <Li key={i} style={{ listStyleType: 'none' }}>
+          <Li key={i} style={{
+            listStyleType: 'none',
+            paddingTop: '3px',
+          }}>
             <Link href={`/posts/${to}`}>
               <a>{title}</a>
             </Link>
