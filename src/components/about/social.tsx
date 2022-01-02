@@ -5,6 +5,7 @@ import TwitterIcon from '@iconify/icons-ant-design/twitter-outlined';
 import GitHubIcon from '@iconify/icons-ant-design/github-outlined';
 import EmailIcon from '@iconify/icons-ant-design/mail-outlined';
 import SteamIcon from '@iconify/icons-cib/steam';
+import WelcomeWriteBlog from '@iconify/icons-dashicons/welcome-write-blog';
 
 const Ul = styled.ul`
   display: table;
@@ -34,6 +35,7 @@ const socials = [
   ['https://twitter.com/remokusu', TwitterIcon],
   ['https://github.com/ekuinox', GitHubIcon],
   ['https://steamcommunity.com/id/lm0x', SteamIcon],
+  ['https://note.com/lm9', WelcomeWriteBlog],
   ['mailto:depkey@me.com', EmailIcon],
 ] as const;
 
