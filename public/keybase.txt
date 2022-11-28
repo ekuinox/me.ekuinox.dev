@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/lm0x
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://me.ekuinox.dev
+  * I am lm0x (https://keybase.io/lm0x) on keybase.
+  * I have a public key ASDtoMY6G2OWe3o5ETUQCFPWsnxtH5ZUs84SZKkRnKUzswo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120eda0c63a1b63967b7a391135100853d6b27c6d1f9654b3ce1264a9119ca533b30a",
+      "host": "keybase.io",
+      "kid": "0120eda0c63a1b63967b7a391135100853d6b27c6d1f9654b3ce1264a9119ca533b30a",
+      "uid": "efbce4c750526ccd221be4de25130219",
+      "username": "lm0x"
+    },
+    "merkle_root": {
+      "ctime": 1669646450,
+      "hash": "521ccfd0c050d83d71a0583b0009f14580c61538e5e9120e27197857ff76012748ab7fff4eb4f8db6e7f0b0ed4fa836bc6c84e5b163c668587e8fbfc9863b6be",
+      "hash_meta": "8ae3659cd604cb0ab32c35d32e6b3ac9fb7a89af1b329876a55ea5bf83c3645a",
+      "seqno": 23628243
+    },
+    "service": {
+      "entropy": "PB+ZSNOsv+eorMJjeh9BFAR7",
+      "hostname": "me.ekuinox.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1669646481,
+  "expire_in": 504576000,
+  "prev": "8e919c876e032af03e301d64008f8bd17d2528727ee0e87a82824bd6a27736c1",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7aDGOhtjlnt6ORE1EAhT1rJ8bR+WVLPOEmSpEZylM7MKp3BheWxvYWTESpcCGsQgjpGch24DKvA+MB1kAI+L0X0lKHJ+4Oh6goJL1qJ3NsHEIA4Dumh4gfteqNmZqPgp1NLrj4ZYY5XeL8zq1iz/3fdrAgHCo3NpZ8RAjrRlDOnHk6xTCjXzFsAfRjxMNKPvrbJMTRgo7qD+iLUgA14hYCKImo3iD3eR3toXCm7jU9oeBwTMmKRygROYDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIM0/egflVk+4aulUy8LcLkaVq108qA7HIjxIkPeVIM/Zo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/lm0x
+
+==================================================================
